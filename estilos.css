@@ -1,0 +1,85 @@
+/* Voy de menos específico a más específico siguiendo el orden de lo que va apareciendo en mi html. Empiezo por lo general y cuando agrego algo específico
+lo hago directamente sobre el selector más específico */
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(255, 247, 234);
+    color: rgb(73, 52, 20);
+    text-align: center;
+}
+
+/* Pongo estilos al p que viene inmediatamente después del h1 -en mi html solo existe un h1- */
+h1 + p{
+    background-color: rgb(73, 52, 20, 0.441);
+    padding: 0.5em;
+    width: 35%;
+    margin: auto;
+    border-radius: 4px;
+}
+
+/* Añado las especificidades del span */
+span{
+    background-color: transparent;
+    font-weight: bold;
+}
+
+#intro img {
+    margin: auto;
+    width: 10%;
+    background-color: transparent;
+    color: transparent;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+#intro h2, #intro p{
+    margin: auto;
+    width: 50%;
+}
+
+#intro h2{
+    padding-bottom: 5px;
+    font-size: 32pt;
+}
+
+#intro p{
+    margin-bottom: 100px;
+    font-size: 13pt;
+}
+
+.seccion{
+    margin-top: 50px;
+}
+
+.seccion h2{
+    margin-top: 0px;
+}
+.seccion img{
+    width: 5%;
+}
+
+h3{
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.seccion p{
+    margin-top: 5px;
+}
+
+#contacto{
+    margin: auto;
+    width: 30%;
+    background-color: rgb(73, 52, 20);
+    color: rgb(255, 247, 234);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+a{
+    color:  rgb(255, 247, 234);
+    padding: 5px;
+    border-radius: 2px;
+}
