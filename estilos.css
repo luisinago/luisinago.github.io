@@ -1,3 +1,14 @@
+
+/* 
+
+UPDATE RESPONSIVE (27-08)
+- Cambié todas las unidades a unidades relativas
+- Agregué max-width a todas las imágenes
+- Quité el span
+- Añadí media queries para Mobile
+
+*/
+
 /* Voy de menos específico a más específico siguiendo el orden de lo que va apareciendo en mi html. Empiezo por lo general y cuando agrego algo específico
 lo hago directamente sobre el selector más específico */
 
@@ -6,30 +17,34 @@ body {
     background-color: rgb(255, 247, 234);
     color: rgb(73, 52, 20);
     text-align: center;
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1{
+    font-size: 3rem;
 }
 
 /* Pongo estilos al p que viene inmediatamente después del h1 -en mi html solo existe un h1- */
 h1 + p{
-    background-color: rgb(73, 52, 20, 0.441);
-    padding: 0.5em;
-    width: 35%;
-    margin: auto;
-    border-radius: 4px;
-}
-
-/* Añado las especificidades del span */
-span{
-    background-color: transparent;
     font-weight: bold;
+    background-color: rgb(73, 52, 20, 0.441);
+    padding: 0.5rem;
+    width: 40%;
+    margin: auto;
+    border-radius: 0.25rem;
 }
 
 #intro img {
     margin: auto;
-    width: 10%;
+    width: 15%;
     background-color: transparent;
     color: transparent;
-    margin: 10px;
-    margin-top: 50px;
+    margin: 1rem;
+    margin-top: 5rem;
 }
 
 #intro h2, #intro p{
@@ -38,34 +53,34 @@ span{
 }
 
 #intro h2{
-    padding-bottom: 5px;
-    font-size: 32pt;
+    padding-bottom: 1rem;
+    font-size: 2rem;
 }
 
 #intro p{
-    margin-bottom: 100px;
-    font-size: 13pt;
+    margin-bottom: 5rem;
+    font-size: 1rem;
 }
 
 .seccion{
-    margin-top: 50px;
+    margin-top: 5rem;
 }
 
 .seccion h2{
-    margin-top: 0px;
+    margin-top: 0rem;
 }
 .seccion img{
-    width: 5%;
+    width: 10%;
 }
 
 h3{
-    font-size: 15px;
-    margin-top: 30px;
-    margin-bottom: 5px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .seccion p{
-    margin-top: 5px;
+    margin-top: 0.05rem;
 }
 
 #contacto{
@@ -73,13 +88,72 @@ h3{
     width: 30%;
     background-color: rgb(73, 52, 20);
     color: rgb(255, 247, 234);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 50px;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 5rem;
 }
 
 a{
     color:  rgb(255, 247, 234);
-    padding: 5px;
-    border-radius: 2px;
+    padding: 1rem;
+}
+
+/* Media queries para Mobile */
+
+@media screen and (max-width: 500px){
+
+    body {
+        font-size: 0.8rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3{
+        font-size: 0.8rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    h1 + p{
+        font-size: 0.9rem;
+        width: 60%;
+    }
+
+    #intro img {
+        width: 50%;
+        margin-top: 3rem;
+    }
+
+    #intro h2{
+        font-size: 1.5rem;
+    }
+
+    #intro h2, #intro p{
+        width: 70%;
+    }
+
+    #intro p{
+        margin-bottom: 3rem;
+        font-size: 0.8rem;
+    }
+
+    .seccion{
+        margin-top: 3rem;
+    }
+
+    .seccion img{
+        width: 30%;
+    }
+
+    #contacto{
+        width: 70%;
+        margin-top: 3rem;
+    }
+
 }
